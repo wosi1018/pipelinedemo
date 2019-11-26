@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('code pull') {
             steps {
-                sh 'python --version'
+                checkout scm
             }
         }
     }
