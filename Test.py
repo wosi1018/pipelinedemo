@@ -9,6 +9,9 @@ class TestNow(unittest.TestCase):
         nowtest2 = nowtest.strftime("%A, %d-%m-%Y : %H:%M")
         now2 = now.strftime("%A, %d-%m-%Y : %H:%M")
         self.assertEqual(nowtest2, now2)
+        
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'foo')
 
 if __name__ == '__main__':
     unittest.main()
