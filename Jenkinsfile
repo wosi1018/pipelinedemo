@@ -14,9 +14,8 @@ pipeline {
         }
         stage('Unit tests') {
             steps {
-                sh  ''' source activate ${BUILD_TAG}
-                        python -m pytest --verbose --junit-xml test-reports/results.xml
-                    '''
+                sh  'source activate ${BUILD_TAG}'
+                sh  'python -m pytest --verbose --junit-xml test-reports/results.xml'
             }
         }
     }
