@@ -12,6 +12,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage('unit test') {
+            steps {
+                sh 'python Test.py'
+            }
+        }
         stage('execution') {
             steps {
                 sh 'python HelloPython.py'
