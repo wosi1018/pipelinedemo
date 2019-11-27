@@ -12,11 +12,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Unit tests') {
-            steps {
-                sh  'source activate ${BUILD_TAG}'
-            }
-        }
         stage('execution') {
             steps {
                 sh 'python HelloPython.py'
